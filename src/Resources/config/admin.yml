@@ -1,0 +1,25 @@
+services:
+
+    tenolo_translation_admin.domain:
+        class: Tenolo\Bundle\TranslationAdminBundle\Admin\DomainAdmin
+        arguments: [~, Tenolo\Bundle\TranslationBundle\Entity\Domain, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Domains, group: Übersetzungen }
+
+    tenolo_translation_admin.language:
+        class: Tenolo\Bundle\TranslationAdminBundle\Admin\LanguageAdmin
+        arguments: [~, Tenolo\Bundle\TranslationBundle\Entity\Language, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Sprachen, group: Übersetzungen }
+
+    tenolo_translation_admin.token:
+        class: Tenolo\Bundle\TranslationAdminBundle\Admin\TokenAdmin
+        arguments: [~, Tenolo\Bundle\TranslationBundle\Entity\Token, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Tokens, group: Übersetzungen }
+
+    tenolo_translation_admin.translations:
+        class: Tenolo\Bundle\TranslationAdminBundle\Admin\TranslationAdmin
+        arguments: [~, Tenolo\Bundle\TranslationBundle\Entity\Translation, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Übersetzungen, group: Übersetzungen }
