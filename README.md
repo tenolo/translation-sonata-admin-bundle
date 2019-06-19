@@ -1,0 +1,1 @@
+translation-sonata-admin-bundle
